@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAEC - Servicios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">PAEC</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="who-we-are.html">Quiénes Somos</a></li>
+                    <li><a href="services.html" class="active">Servicios</a></li>
+                    <li><a href="gallery.html">Galería</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Servicios</h1>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Unidades de Aprendizaje (UAQ)</h2>
+            
+            <div class="service-item fade-in">
+                <div class="service-content">
+                    <h3>Matemáticas</h3>
+                    <p>Aplicamos conceptos matemáticos para calcular el impacto ambiental y desarrollar soluciones eficientes para el reciclaje.</p>
+                </div>
+            </div>
+            
+            <div class="service-item fade-in delay-1">
+                <div class="service-content">
+                    <h3>Lenguaje y Comunicación</h3>
+                    <p>Desarrollamos habilidades de comunicación efectiva para promover mensajes de sostenibilidad y reciclaje.</p>
+                </div>
+                <div class="service-image">
+                    <img src="C1.jpg" alt="Lenguaje y Comunicación">
+                </div>
+            </div>
+            
+            <div class="service-item fade-in delay-2">
+                <div class="service-content">
+                    <h3>Física</h3>
+                    <p>Estudiamos los principios físicos involucrados en los procesos de reciclaje y transformación de materiales.</p>
+                    
+                    <button class="toggle-pdf-size-button" id="togglePdfSize">Ampliar/Reducir PDF</button>
+                    
+                    <div class="pdf-viewer" id="fisicaPdfViewer">
+                        <center><iframe src="fisica.pdf" width="100%" height="600px" style="border:none;">
+                            Este navegador no soporta la visualización de PDFs. Por favor, <a href="fisica.pdf">descarga el PDF</a> para verlo.
+                        </iframe></center>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-item fade-in delay-3">
+                <div class="service-content">
+                    <h3>Puericultura</h3>
+                    <div class="service-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2q33n2FtJnk?si=CSlntvpTNy9Q3KrH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                </div>
+            </div>
+            
+            <div class="service-item fade-in delay-4">
+                <div class="service-content">
+                    <h3>Inglés</h3>
+                    <p>Aprendemos vocabulario y conceptos relacionados con el medio ambiente y la sostenibilidad en inglés.</p>
+                </div>
+                <div class="service-image">
+                    <img src="I1.jpg" alt="Inglés">
+                </div>
+            </div>
+            
+            <div class="service-item fade-in delay-5">
+                <div class="service-content">
+                    <h3>Ciencias Sociales</h3>
+                    <p>Analizamos el impacto social de las prácticas de reciclaje y cómo pueden transformar comunidades.</p>
+                </div>
+                <div class="service-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Sn_LYbaGKYM?si=5SHC5E3dPeiOyinZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-phone"></i> 4423652090</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/4423652090" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="who-we-are.html">Quiénes Somos</a></li>
+                        <li><a href="services.html">Servicios</a></li>
+                        <li><a href="gallery.html">Galería</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 PAEC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Script para expandir/reducir el PDF
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('togglePdfSize');
+            const pdfViewer = document.getElementById('fisicaPdfViewer');
+
+            if (toggleButton && pdfViewer) {
+                toggleButton.addEventListener('click', function() {
+                    pdfViewer.classList.toggle('expanded');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
